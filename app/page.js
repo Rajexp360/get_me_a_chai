@@ -20,12 +20,12 @@ export default function Home() {
        px-6 rounded-full shadow-lg transform transition duration-500 hover:scale-105 mt-4">Read More</button>
         </div>
       </div>
-      
+
       <div className="bg-white opacity-5 w-full h-0.5">
       </div>
 
 
-      <div className=" mx-auto my-13">
+      <div className=" mx-auto my-12">
         <h1 className="text-white text-center mx-auto text-xl font-bold">Your Fans can get you a Chai</h1>
 
         <div className="text-white mx-auto text-xl font-bold">
@@ -51,9 +51,9 @@ export default function Home() {
           </div>
 
         </div>
-          <div className="bg-white opacity-5 mt-15 w-full h-0.5">
-      </div>
-              <h1 className="text-white text-center mx-auto text-xl mt-10 font-bold">Learn more about us</h1>
+        <div className="bg-white opacity-5 mt-14 w-full h-0.5">
+        </div>
+        <h1 className="text-white text-center mx-auto text-xl mt-10 font-bold">Learn more about us</h1>
 
         <div className="flex justify-center mt-8">
           <iframe
@@ -67,7 +67,7 @@ export default function Home() {
             className="rounded-lg shadow-lg"
           ></iframe>
         </div>
-   
+
 
 
 
