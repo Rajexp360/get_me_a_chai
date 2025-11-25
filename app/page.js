@@ -12,10 +12,10 @@ export default function Home() {
         </div>
         <p className="text-white">A crowdfunding platform for creators. Get funded by your fans and followers. Start a campaign now!</p>
         <div className="flex gap-2">
-          <button className="bg-gradient-to-r cursor-pointer from-purple-500
+          <button className="bg-linear-to-r cursor-pointer from-purple-500
        to-pink-500 hover:from-pink-500 hover:to-yellow-500 text-white font-bold py-2
        px-6 rounded-full shadow-lg transform transition duration-500 hover:scale-105 mt-4">Start Now</button>
-          <button className="bg-gradient-to-r cursor-pointer from-purple-500
+          <button className="bg-linear-to-r cursor-pointer from-purple-500 
        to-pink-500 hover:from-pink-500 hover:to-yellow-500 text-white font-bold py-2
        px-6 rounded-full shadow-lg transform transition duration-500 hover:scale-105 mt-4">Read More</button>
         </div>
