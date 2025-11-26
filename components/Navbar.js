@@ -21,7 +21,7 @@ const Navbar = () => {
         </ul> */}
       <div>
         <Link href="/login">
-          <button className="bg-gradient-to-r cursor-pointer from-purple-500
+          <button className="bg-linear-to-r cursor-pointer from-purple-500
        to-pink-500 hover:from-pink-500 hover:to-yellow-500 text-white font-bold py-2
        px-6 rounded-xl shadow-lg transform transition duration-500 hover:scale-105 m-2">Login</button>
         </Link>
