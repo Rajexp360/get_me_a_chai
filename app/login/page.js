@@ -1,4 +1,8 @@
+
+"use client"
 import React from 'react'
+import { useSession, signIn, signOut } from "next-auth/react" 
+
 import { FcGoogle } from 'react-icons/fc';
 import { FaLinkedinIn, FaTwitter, FaFacebookF, FaGithub, FaApple } from 'react-icons/fa';
 

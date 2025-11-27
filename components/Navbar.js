@@ -1,8 +1,24 @@
+"use client"
 import React from 'react'
 import Link from 'next/link'
+import { useSession, signIn, signOut } from "next-auth/react"
+import GitHubProvider from "next-auth/providers/github";
+
+
+
 
 const Navbar = () => {
+  const { data: session } = useSession()
+  if(session) {
+    return <>
+      Signed in as {session.user.email} <br/>
+      <button onClick={() => signOut()}>Sign out</button>
+    </>
+  }
+
+  
   return (
+
     <nav className='bg-gray-900 text-white flex justify-between items-center'>
       <div className='logo text-lg flex font-bold ml-5 '>
 
