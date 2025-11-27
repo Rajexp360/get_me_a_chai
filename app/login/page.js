@@ -1,12 +1,12 @@
 
 "use client"
 import React from 'react'
-import { useSession, signIn, signOut } from "next-auth/react" 
+import { signIn } from "next-auth/react"
 
 import { FcGoogle } from 'react-icons/fc';
 import { FaLinkedinIn, FaTwitter, FaFacebookF, FaGithub, FaApple } from 'react-icons/fa';
 
-const page = () => {
+const Login = () => {
   return (
     <div className="text-white flex justify-center flex-col my-14 items-center">
 
@@ -36,4 +36,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Login

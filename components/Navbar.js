@@ -3,10 +3,6 @@ import React from 'react'
 import Link from 'next/link'
 import { useSession, signIn, signOut } from "next-auth/react"
 
-
-
-
-
 const Navbar = () => {
   const { data: session } = useSession()
 
@@ -29,17 +25,15 @@ const Navbar = () => {
 
       <div>
         {session ? (
-          <div className='flex items-center gap-4'>
-            <span>Signed in as {session.user.email}</span>
-            <button onClick={() => signOut()} className="bg-linear-to-r cursor-pointer from-purple-500
-       to-pink-500 hover:from-pink-500 hover:to-yellow-500 text-white font-bold py-2
-       px-6 rounded-xl shadow-lg transform transition duration-500 hover:scale-105 m-2">Sign out</button>
+          <div className='flex items-center '>
+            <Link href="/profile" className="inline-block bg-linear-to-r cursor-pointer from-purple-500 to-pink-500 hover:from-pink-500 hover:to-yellow-500 text-white font-bold py-2 px-6 rounded-xl shadow-lg transform transition duration-500 hover:scale-105 ">
+              Profile
+            </Link>
+            <button onClick={() => signOut()} className="bg-linear-to-r cursor-pointer from-purple-500 to-pink-500 hover:from-pink-500 hover:to-yellow-500 text-white font-bold py-2 px-6 rounded-xl shadow-lg transform transition duration-500 hover:scale-105 m-2">Sign out</button>
           </div>
         ) : (
-          <Link href="/login">
-            <button className="bg-linear-to-r cursor-pointer from-purple-500
-       to-pink-500 hover:from-pink-500 hover:to-yellow-500 text-white font-bold py-2
-       px-6 rounded-xl shadow-lg transform transition duration-500 hover:scale-105 m-2">Login</button>
+          <Link href="/login" className="inline-block bg-linear-to-r cursor-pointer from-purple-500 to-pink-500 hover:from-pink-500 hover:to-yellow-500 text-white font-bold py-2 px-6 rounded-xl shadow-lg transform transition duration-500 hover:scale-105 m-2">
+            Login
           </Link>
         )}
       </div>
