@@ -25,7 +25,7 @@ const page = () => {
         <button className='flex items-center justify-start gap-2 px-8 py-2 border border-transparent rounded-lg text-black bg-white hover:bg-gray-200 transition-colors'>
           <FaFacebookF className='text-xl text-[#1877F2]' /> Continue with Facebook
         </button>
-        <button className='flex items-center justify-start gap-2 px-8 py-2 border border-transparent rounded-lg text-black bg-white hover:bg-gray-200 transition-colors'>
+        <button onClick={() => signIn('github')} className='flex hover:cursor-pointer items-center justify-start gap-2 px-8 py-2 border border-transparent rounded-lg text-black bg-white hover:bg-gray-200 transition-colors'>
           <FaGithub className='text-xl' /> Continue with GitHub
         </button>
         <button className='flex items-center justify-start gap-2 px-8 py-2 border border-transparent rounded-lg text-black bg-white hover:bg-gray-200 transition-colors'>
