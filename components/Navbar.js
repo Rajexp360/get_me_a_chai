@@ -1,9 +1,12 @@
 "use client"
-import React from 'react'
+import React, { useState } from "react";
+
 import Link from 'next/link'
 import { useSession, signIn, signOut } from "next-auth/react"
 
+
 const Navbar = () => {
+  const [showdropdown, setshowdropdown] = useState(false)
   const { data: session } = useSession()
 
   return (
@@ -17,11 +20,28 @@ const Navbar = () => {
 
       <div>
         {session ? (
-          <div className='flex items-center '>
-            <button id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="500" data-dropdown-trigger="hover" className="inline-flex items-center bg-linear-to-r cursor-pointer from-purple-500 to-pink-500 hover:from-pink-500 hover:to-yellow-500 text-white font-bold py-2 px-6 rounded-xl shadow-lg transform transition duration-500 hover:scale-105 mr-2 focus:outline-none" type="button">
-              {session.user.name}
-              <svg className="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
-            </button>
+          <div className='flex items-center'>
+            <div className="relative mx-2">
+              <button onClick={() => setshowdropdown(!showdropdown)} id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="500" data-dropdown-trigger="hover" className="inline-flex items-center bg-linear-to-r cursor-pointer from-purple-500 to-pink-500 hover:from-pink-500 hover:to-yellow-500 text-white font-bold py-2 px-6 rounded-xl shadow-lg transform transition duration-500 hover:scale-105 focus:outline-none" type="button">
+               {session.user.name}
+                <svg className="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
+              </button>
+              
+                <div className={`absolute z-10 mt-2 left-1.5 bg-gray-800 rounded-lg shadow-lg w-44 origin-top-right transition-all duration-300 ease-out ${showdropdown ? 'opacity-100 scale-100 visible' : 'opacity-0 scale-95 invisible'}`}>
+                  <ul className="py-2 text-sm text-gray-700">
+                    <li>
+                      <a href="#" className="block ml-2 py-2 text-white transition-transform duration-400 hover:scale-105">Contact</a>
+                    </li>
+                    <li>
+                      <a href="#" className="block ml-2 py-2 text-white transition-transform duration-400 hover:scale-105">Settings</a>
+                    </li>
+                   <li>
+                      <a href="#" className="block ml-2 py-2 text-white transition-transform duration-400 hover:scale-105">Profile</a>
+                    </li>
+                  </ul>
+                </div>
+              
+            </div>
             
             <Link href="/profile" className="inline-block bg-linear-to-r cursor-pointer from-purple-500 to-pink-500 hover:from-pink-500 hover:to-yellow-500 text-white font-bold py-2 px-6 rounded-xl shadow-lg transform transition duration-500 hover:scale-105 ">
               Profile
@@ -40,35 +60,3 @@ const Navbar = () => {
 
 export default Navbar
 
-
-// {session && 
-//      <>
-
-// <button id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="500" data-dropdown-trigger="hover" className="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button">
-//   Dropdown button 
-//   <svg className="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/></svg>
-// </button>
-
-// {/* {<!-- Dropdown menu -->} */}
-// <div id="dropdownDelay" className="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
-//     <ul className="p-2 text-sm text-body font-medium" aria-labelledby="dropdownDelayButton">
-//       <li>
-//         <a href="#" className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Dashboard</a>
-//       </li>
-//       <li>
-//         <a href="#" className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Settings</a>
-//       </li>
-//       <li>
-//         <a href="#" className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Earnings</a>
-//       </li>
-//       <li>
-//         <a href="#" className="inline-flex items-center w-full p-2 hover:bg-neutral-tertiary-medium hover:text-heading rounded">Sign out</a>
-//       </li>
-//     </ul>
-// </div>
-
-
-      
-//      </>
-
-// }
