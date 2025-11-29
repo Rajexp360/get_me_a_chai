@@ -1,15 +1,15 @@
 import React from 'react'
 
-const Username = async ({ params }) => {
+const Username = async ({ params }) => { 
     const { username } = await params;
     return (
-        <div className='cover w-full bg-gray-900 text-white min-h-screen relative'>
+        <div className='cover w-full text-white min-h-screen relative'>
             <div className='w-full h-[350px] relative'>
                 <img
                     className='w-full h-full object-cover shadow-lg'
                     src="https://c10.patreonusercontent.com/4/patreon-media/p/campaign/8289103/46bf2753989b49ec97a9339d21f39c18/eyJ3Ijo2MjAsIndlIjoxfQ%3D%3D/1.jpg?token-hash=iFSEM9fn_iPl9GPGbGoue8YmirEJ4V_xa_4CveCV1CQ%3D&token-time=1764806400"
                     alt="Cover Image"
-                />
+                /> 
                 <div className='absolute -bottom-14 left-1/2 transform -translate-x-1/2'>
                     <img
                         className='w-32 h-32 rounded-xl border-4 border-gray-900 object-cover'
@@ -28,6 +28,26 @@ const Username = async ({ params }) => {
                 </div>
                 <div className='text-gray-400 text-sm'>
                     12,345 members • 82 posts • $15,000/release
+                </div>
+            </div>
+            <div className="container w-[80%] my-3 mx-auto flex gap-3">
+                <div className="supporters bg-slate-900 rounded-lg p-10 text-white  w-1/2">
+                <ul>
+                    <li>Supporters</li>
+                    <li>Supporters</li>
+                    <li>Supporters</li>
+                    <li>Supporters</li>
+                </ul>
+
+                </div>
+                <div className="makepayment rounded-lg bg-slate-900 p-10 text-white w-1/2">
+                <ul>
+                    <li>Make Payment</li>
+                    <li>Make Payment</li>
+                    <li>Make Payment</li>
+                    <li>Make Payment</li>
+                </ul>
+
                 </div>
             </div>
         </div>
