@@ -50,11 +50,9 @@ const Navbar = () => {
                     <Link href="#" className="block ml-4 py-2 text-white transition-transform duration-400 hover:scale-105">Dashboard</Link>
                   </li>
                   <li>
-                    <Link href="#" className="block ml-4 py-2 text-white transition-transform duration-400 hover:scale-105">Settings</Link>
+                    <Link href="#" className="block ml-4 py-2 text-white transition-transform duration-400 hover:scale-105">Your Page</Link>
                   </li>
-                  <li>
-                    <Link href="#" className="block ml-4 py-2 text-white transition-transform duration-400 hover:scale-105">Earnings</Link>
-                  </li>
+                 
                   <li>
                     <Link onClick={() => signOut()} href="#" className="block ml-4 py-2 text-white transition-transform duration-400 hover:scale-105">Sign out</Link>
                   </li>
