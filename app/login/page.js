@@ -1,12 +1,20 @@
-
 "use client"
-import React from 'react'
-import { signIn } from "next-auth/react"
-
+import React, { useEffect } from 'react'
+import { signIn, signOut, useSession } from "next-auth/react"
+import { useRouter } from 'next/navigation'
 import { FcGoogle } from 'react-icons/fc';
 import { FaLinkedinIn, FaTwitter, FaFacebookF, FaGithub, FaApple } from 'react-icons/fa';
 
 const Login = () => {
+  const { data: session } = useSession()
+  const router = useRouter()
+
+  useEffect(() => {
+    if (session) {
+      router.push('/dashboard')
+    }
+  }, [session, router])
+
   return (
     <div className="text-white flex justify-center flex-col my-14 items-center">
 
