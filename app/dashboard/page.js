@@ -5,7 +5,7 @@ import{useSession, signOut} from "next-auth/react"
 
 const dashboard= () => {
     const { data: session } = useSession()
-    const router = useRouter()
+    const router = useRouter()  
     if (!session) {
       router.push('/login')
     }
