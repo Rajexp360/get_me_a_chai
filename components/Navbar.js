@@ -30,7 +30,7 @@ const Navbar = () => {
     <nav className='bg-gray-900 text-white flex justify-between items-center px-4 h-16'>
       <div className='logo text-lg flex font-bold ml-5 '>
         <Link href={"/"}>
-          <img src="/gif/tea.gif" alt="tea icon" className='inline-block h-6 w-[13px] mr-2' />
+          <img src="/gif/tea.gif" alt="tea icon" className=" inline-block h-6 w-[13px] mr-2" />
           <span>GetMeAChai</span>
         </Link>
       </div>

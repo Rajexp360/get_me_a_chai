@@ -19,3 +19,7 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+.invertImg{
+  filter: invert(0.23);
+
+}
