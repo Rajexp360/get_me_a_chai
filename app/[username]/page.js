@@ -34,15 +34,10 @@ const Username = async ({ params }) => {
                 <div className="supporters bg-slate-900 rounded-lg p-10 text-white  w-1/2">
                     <h1 className="text-xl font-bold">Supporters</h1>
                     <ul className="mt-3 ml-3">
-                        <li>Rajesh donated $3 with message...</li>
-                        <li>Rajesh donated $3 with message...</li>
-                        <li>Rajesh donated $3 with message...</li>
-                        <li>Rajesh donated $3 with message...</li>
-                        <li>Rajesh donated $3 with message...</li>
-                        <li>Rajesh donated $3 with message...</li>
-                        <li>Rajesh donated $3 with message...</li>
-                        <li>Rajesh donated $3 with message...</li>
-                        <li>Rajesh donated $3 with message...</li>
+                        <li><img src="/gif/users.png" className='inline-block w-8 mx-2 my-1' alt="" />Rajesh donated <span className="font-bold text-xl text-green-400 rounded-full" >$30</span> with message lots of love from Nepal💖</li>
+                        <li><img src="/gif/users.png" className='inline-block w-8 mx-2 my-1' alt="" />Rajesh donated <span className="font-bold text-xl text-green-400 rounded-full" >$30</span> with message lots of love from Nepal💖</li>
+                        <li><img src="/gif/users.png" className='inline-block w-8 mx-2 my-1' alt="" />Rajesh donated <span className="font-bold text-xl text-green-400 rounded-full" >$30</span> with message lots of love from Nepal💖</li>
+
                     </ul>
                 </div>
                 <div className="makepayment rounded-lg bg-slate-900 p-10 text-white w-1/2">
@@ -51,7 +46,9 @@ const Username = async ({ params }) => {
                         <input type="text" className="w-full p-2 rounded-lg bg-slate-800" placeholder="Enter Name" />
                         <input type="text" className="w-full p-2 rounded-lg bg-slate-800" placeholder="Enter Message" />
                         <input type="text" className="w-full p-2 rounded-lg bg-slate-800" placeholder="Enter Amount" />
-                        <button type="button" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white p-2 rounded-lg font-bold shadow-lg transition-all duration-300">Pay</button>
+                        <button type="button" className="bg-gradient-to-r cursor-pointer from-purple-500 to-pink-500
+                         hover:from-purple-600 hover:to-pink-600 text-white p-2 rounded-lg font-bold shadow-lg 
+                         transition-all duration-300">Pay</button>
                     </div>
                     <div className="flex gap-2 mt-5">
                         <button className="bg-slate-800 p-2 hover:scale-110 transition-all duration-300 rounded-lg">Pay $10</button>
