@@ -44,10 +44,16 @@ const dashboard = () => {
           <input type="text" id="coverPic" name="coverPic" className='bg-slate-800 rounded-lg p-2 w-full text-white focus:outline-none focus:ring-2 focus:ring-blue-500' />
         </div>
 
-        {/* Razorpay Credentials */}
+        {/* Razorpay id */}
         <div className='flex flex-col gap-2'>
-          <label htmlFor="razorpay" className='text-sm font-medium'>Razorpay Credentials</label>
-          <input type="text" id="razorpay" name="razorpay" className='bg-slate-800 rounded-lg p-2 w-full text-white focus:outline-none focus:ring-2 focus:ring-blue-500' />
+          <label htmlFor="razorpayid" className='text-sm font-medium'>Razorpay Id</label>
+          <input type="text" id="razorpayid" name="razorpayid" className='bg-slate-800 rounded-lg p-2 w-full text-white focus:outline-none focus:ring-2 focus:ring-blue-500' />
+        </div>
+        
+        {/* Razorpay Secret */}
+        <div className='flex flex-col gap-2'>
+          <label htmlFor="razorpaysecret" className='text-sm font-medium'>Razorpay Secret</label>
+          <input type="text" id="razorpaysecret" name="razorpaysecret" className='bg-slate-800 rounded-lg p-2 w-full text-white focus:outline-none focus:ring-2 focus:ring-blue-500' />
         </div>
 
         {/* Save Button */}
